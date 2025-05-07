@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DiziFilm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        .carousel-img {
+            max-height: 700px;
+            min-height: 700px;
+            object-fit: cover;
+        }
+
+        #filmCarousel {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card-img-fixed {
+            height: 220px;
+            object-fit: cover;
+            border-top-left-radius: 0.375rem;
+            border-top-right-radius: 0.375rem;
+        }
+
+        .film-card {
+            box-shadow: 0 4px 12px #0000001a;
+            transition: transform 0.2s;
+            background-color: black;
+            color: white;
+        }
+
+        .film-card:hover {
+            transform: scale(1.02);
+        }
+
+        .register {
+            background-color: white;
+            color: black;
+        }
+
+        .detail {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand" href="index.html">
+            DiziFilm
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/filmler.html">Filmler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/diziler.html">Diziler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/iletisim.html">İletişim</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="/login.html" class="btn btn-outline-light me-2" target="_blank">Giriş Yap</a>
+                <a href="/register.html" class="btn btn-primary register">Kayıt Ol</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="container mt-4">
+            <div id="filmCarousel" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <a href="html/avengers.html">
+                            <img src="jpg/avengers-2-1.jpg" class="d-block w-100 carousel-img" alt="avengers fotoğrafı">
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="html/mandolarian.html">
+                            <img src="jpg/mando.jpg" class="d-block w-100 carousel-img" alt="mandolarian fotoğrafı">
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="html/breaking.html">
+                            <img src="jpg/breaking.jpg" class="d-block w-100 carousel-img" alt="breaking bad fotoğrafı">
+                        </a>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#filmCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#filmCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card film-card h-100">
+                        <img src="jpg/pool.jpeg" class="card-img-top img-fluid card-img-fixed" alt="Deadpool">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Deadpool</h5>
+                            <p class="card-text">Eski bir özel kuvvetler askeri olan Wade Wilson, kanser tedavisi
+                                sırasında kazandığı olağanüstü iyileşme gücüyle anti-kahraman bir savaşçıya dönüşür...
+                            </p>
+                            <a href="html/deadpool.html" class="btn btn-primary mt-auto detail">Detaya Git</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card film-card h-100">
+                        <img src="jpg/hızlı.jpg" class="card-img-top img-fluid card-img-fixed" alt="Hızlı ve Öfkeli 5">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Hızlı ve Öfkeli 5</h5>
+                            <p class="card-text">Dom ve Brian, Rio de Janeiro’da özgürlüklerini kazanmak için son bir
+                                soyguna girişirler. Bu iş için en iyi ekiplerini toplarlar ama karşılarında hem polis
+                                hem suçlular vardır...</p>
+                            <a href="html/hızlı.html" class="btn btn-primary mt-auto detail">Detaya Git</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card film-card h-100">
+                        <img src="jpg/blacklist.jpg" class="card-img-top img-fluid card-img-fixed" alt="Blacklist">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Blacklist</h5>
+                            <p class="card-text">Dünyanın en çok aranan suçlularından biri olan Reddington, FBI'a teslim
+                                olur ve sadece yeni mezun bir ajanla çalışmak istediğini söyler. Ardından gizemli bir
+                                liste sunar...</p>
+                            <a href="html/blacklist.html" class="btn btn-primary mt-auto detail">Detaya Git</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-secondary">Daha Fazla Yükle</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
